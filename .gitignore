@@ -1,0 +1,11 @@
+# Python virtual environment
+venv/
+env/
+
+# Environment variables
+.env
+
+# Python cache and build files
+__pycache__/
+chroma_db/
+.DS_Store
