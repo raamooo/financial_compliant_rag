@@ -40,7 +40,11 @@
     </footer>
 
     <script>
-        const API_URL = "http://localhost:8000/chat"; // Replace with deployed backend URL later
+        const response = await fetch('https://regulatory-rag-backend.onrender.com/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question: userQuery })
+}); // Replace with deployed backend URL later
         const chatContainer = document.getElementById("chat-container");
         const chatForm = document.getElementById("chat-form");
         const userInput = document.getElementById("user-input");
